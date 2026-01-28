@@ -94,8 +94,55 @@ export default function ProjectDetailClient({ id }: { id: string }) {
           </section>
         )}
 
-        {/* Key Features & Process Logic 섹션들도 동일하게 유지... */}
-        {/* (지면 관계상 생략하지만 기존 logic 그대로 복사해서 넣으시면 됩니다) */}
+       {/* Key Features 섹션 */}
+{project.mainImages && project.mainImages.length > 0 && (
+  <section className="mb-20">
+    <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-emerald-500 pl-4">Key Features</h2>
+    <div className="grid md:grid-cols-2 gap-8">
+      {project.mainImages.map((item, idx) => (
+        <div key={idx} className="space-y-4">
+          <div 
+            className="group relative rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900 aspect-video shadow-lg cursor-zoom-in"
+            onClick={() => setSelectedImage(item.src)}
+          >
+            <img src={item.src} alt={`Main feature ${idx + 1}`} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                <ZoomIn className="text-white w-10 h-10" />
+             </div>
+          </div>
+          <p className="text-zinc-400 text-sm leading-relaxed border-l-2 border-zinc-700 pl-3">
+            {item.caption}
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+    {/* Process & Logic 섹션 */}
+    {(project.processImages || project.logicImages) && (
+    <section className="mb-20">
+        <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-purple-500 pl-4">Process & Logic</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+        {(project.processImages || project.logicImages)?.map((item, idx) => (
+            <div key={idx} className="space-y-4">
+            <div 
+                className="group relative rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900 aspect-video shadow-lg cursor-zoom-in"
+                onClick={() => setSelectedImage(item.src)}
+            >
+                <img src={item.src} alt={`Process logic ${idx + 1}`} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                    <ZoomIn className="text-white w-10 h-10" />
+                </div>
+            </div>
+            <p className="text-zinc-400 text-sm leading-relaxed border-l-2 border-zinc-700 pl-3">
+                {item.caption}
+            </p>
+            </div>
+        ))}
+        </div>
+    </section>
+    )}
       </main>
     </div>
   );
