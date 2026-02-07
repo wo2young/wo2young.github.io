@@ -2,5 +2,5 @@
 2:I[85755,["/_next/static/chunks/0c6932420e96e619.js","/_next/static/chunks/768cec7a271c29a1.js"],"default"]
 3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"_Ccz4CtKJahodi14-A5BG","rsc":["$","$1","c",{"children":[["$","$L2",null,{"id":"beverage-mes"}],[["$","script","script-0",{"src":"/_next/static/chunks/768cec7a271c29a1.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"sHgY1RhgYj5B-yZUrr-K1","rsc":["$","$1","c",{"children":[["$","$L2",null,{"id":"beverage-mes"}],[["$","script","script-0",{"src":"/_next/static/chunks/768cec7a271c29a1.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null
